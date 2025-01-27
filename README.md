@@ -238,3 +238,5 @@ The best result on the validation set was 90.26%, and the algorithm stopped afte
 
 The loss, accuracy and confusion matrix are shown below:
 ![Image](https://github.com/user-attachments/assets/447d4ae4-96b9-4d93-8331-87309830581e)
+![Image](https://github.com/user-attachments/assets/f00d6c7b-d70b-4d71-8bb3-84eec7f2c27f)
+
