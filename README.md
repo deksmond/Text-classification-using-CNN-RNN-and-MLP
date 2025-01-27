@@ -237,4 +237,4 @@ Epoch 10/10 Validation Loss: 0.6033 Validation Accuracy: 0.9058
 The best result on the validation set was 90.26%, and the algorithm stopped after 10 iterations.
 
 The loss, accuracy and confusion matrix are shown below:
-![CNN training and validation loss](https://drive.google.com/file/d/1kd0ao77BI9gvUDMn_TDlQqxd-LLrXj1-/view?usp=drive_link)
+![Image](https://github.com/user-attachments/assets/447d4ae4-96b9-4d93-8331-87309830581e)
