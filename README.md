@@ -70,177 +70,64 @@ It builds the model and creates the layers of the CNN:
 
   ## Training and validation
 
-```
-Training the model...
-Epoch 1/10 Batch 0 Loss: 1.4144 Accuracy: 0.1719
-Epoch 1/10 Batch 100 Loss: 1.0256 Accuracy: 0.5702
-Epoch 1/10 Batch 200 Loss: 0.7079 Accuracy: 0.7219
-Epoch 1/10 Batch 300 Loss: 0.5849 Accuracy: 0.7772
-Epoch 1/10 Batch 400 Loss: 0.5171 Accuracy: 0.8061
-Epoch 1/10 Batch 500 Loss: 0.4760 Accuracy: 0.8241
-Epoch 1/10 Batch 600 Loss: 0.4463 Accuracy: 0.8363
-Epoch 1/10 Batch 700 Loss: 0.4244 Accuracy: 0.8455
-Epoch 1/10 Batch 800 Loss: 0.4098 Accuracy: 0.8515
-Epoch 1/10 Batch 900 Loss: 0.3941 Accuracy: 0.8579
-Epoch 1/10 Batch 1000 Loss: 0.3831 Accuracy: 0.8626
-Epoch 1/10 Batch 1100 Loss: 0.3731 Accuracy: 0.8666
-Epoch 1/10 Batch 1200 Loss: 0.3642 Accuracy: 0.8700
-Epoch 1/10 Batch 1300 Loss: 0.3584 Accuracy: 0.8721
-Epoch 1/10 Batch 1400 Loss: 0.3511 Accuracy: 0.8751
-Epoch 1/10 Validation Loss: 0.2636 Validation Accuracy: 0.9103
-Epoch 2/10 Batch 0 Loss: 0.2547 Accuracy: 0.9219
-Epoch 2/10 Batch 100 Loss: 0.1947 Accuracy: 0.9313
-Epoch 2/10 Batch 200 Loss: 0.1975 Accuracy: 0.9320
-Epoch 2/10 Batch 300 Loss: 0.1986 Accuracy: 0.9319
-Epoch 2/10 Batch 400 Loss: 0.1963 Accuracy: 0.9324
-Epoch 2/10 Batch 500 Loss: 0.1942 Accuracy: 0.9328
-Epoch 2/10 Batch 600 Loss: 0.1950 Accuracy: 0.9320
-Epoch 2/10 Batch 700 Loss: 0.1953 Accuracy: 0.9320
-Epoch 2/10 Batch 800 Loss: 0.1970 Accuracy: 0.9310
-Epoch 2/10 Batch 900 Loss: 0.1988 Accuracy: 0.9303
-Epoch 2/10 Batch 1000 Loss: 0.2013 Accuracy: 0.9291
-Epoch 2/10 Batch 1100 Loss: 0.2023 Accuracy: 0.9292
-Epoch 2/10 Batch 1200 Loss: 0.2038 Accuracy: 0.9287
-Epoch 2/10 Batch 1300 Loss: 0.2047 Accuracy: 0.9285
-Epoch 2/10 Batch 1400 Loss: 0.2035 Accuracy: 0.9288
-Epoch 2/10 Validation Loss: 0.2559 Validation Accuracy: 0.9162
-Epoch 3/10 Batch 0 Loss: 0.0751 Accuracy: 0.9844
-Epoch 3/10 Batch 100 Loss: 0.1175 Accuracy: 0.9612
-Epoch 3/10 Batch 200 Loss: 0.1197 Accuracy: 0.9605
-Epoch 3/10 Batch 300 Loss: 0.1189 Accuracy: 0.9609
-Epoch 3/10 Batch 400 Loss: 0.1176 Accuracy: 0.9606
-Epoch 3/10 Batch 500 Loss: 0.1193 Accuracy: 0.9599
-Epoch 3/10 Batch 600 Loss: 0.1202 Accuracy: 0.9597
-Epoch 3/10 Batch 700 Loss: 0.1211 Accuracy: 0.9593
-Epoch 3/10 Batch 800 Loss: 0.1230 Accuracy: 0.9583
-Epoch 3/10 Batch 900 Loss: 0.1258 Accuracy: 0.9570
-Epoch 3/10 Batch 1000 Loss: 0.1270 Accuracy: 0.9566
-Epoch 3/10 Batch 1100 Loss: 0.1276 Accuracy: 0.9562
-Epoch 3/10 Batch 1200 Loss: 0.1291 Accuracy: 0.9553
-Epoch 3/10 Batch 1300 Loss: 0.1303 Accuracy: 0.9548
-Epoch 3/10 Batch 1400 Loss: 0.1315 Accuracy: 0.9544
-Epoch 3/10 Validation Loss: 0.2906 Validation Accuracy: 0.9115
-Epoch 4/10 Batch 0 Loss: 0.0744 Accuracy: 0.9844
-Epoch 4/10 Batch 100 Loss: 0.0645 Accuracy: 0.9802
-Epoch 4/10 Batch 200 Loss: 0.0604 Accuracy: 0.9803
-Epoch 4/10 Batch 300 Loss: 0.0585 Accuracy: 0.9807
-Epoch 4/10 Batch 400 Loss: 0.0569 Accuracy: 0.9808
-Epoch 4/10 Batch 500 Loss: 0.0575 Accuracy: 0.9806
-Epoch 4/10 Batch 600 Loss: 0.0583 Accuracy: 0.9802
-Epoch 4/10 Batch 700 Loss: 0.0598 Accuracy: 0.9799
-Epoch 4/10 Batch 800 Loss: 0.0609 Accuracy: 0.9795
-Epoch 4/10 Batch 900 Loss: 0.0621 Accuracy: 0.9790
-Epoch 4/10 Batch 1000 Loss: 0.0629 Accuracy: 0.9788
-Epoch 4/10 Batch 1100 Loss: 0.0652 Accuracy: 0.9780
-Epoch 4/10 Batch 1200 Loss: 0.0670 Accuracy: 0.9772
-Epoch 4/10 Batch 1300 Loss: 0.0681 Accuracy: 0.9768
-Epoch 4/10 Batch 1400 Loss: 0.0690 Accuracy: 0.9763
-Epoch 4/10 Validation Loss: 0.3541 Validation Accuracy: 0.9085
-Epoch 5/10 Batch 0 Loss: 0.0594 Accuracy: 0.9844
-Epoch 5/10 Batch 100 Loss: 0.0358 Accuracy: 0.9878
-Epoch 5/10 Batch 200 Loss: 0.0321 Accuracy: 0.9894
-Epoch 5/10 Batch 300 Loss: 0.0312 Accuracy: 0.9899
-Epoch 5/10 Batch 400 Loss: 0.0313 Accuracy: 0.9898
-Epoch 5/10 Batch 500 Loss: 0.0321 Accuracy: 0.9898
-Epoch 5/10 Batch 600 Loss: 0.0343 Accuracy: 0.9889
-Epoch 5/10 Batch 700 Loss: 0.0369 Accuracy: 0.9884
-Epoch 5/10 Batch 800 Loss: 0.0381 Accuracy: 0.9880
-Epoch 5/10 Batch 900 Loss: 0.0378 Accuracy: 0.9881
-Epoch 5/10 Batch 1000 Loss: 0.0397 Accuracy: 0.9873
-Epoch 5/10 Batch 1100 Loss: 0.0400 Accuracy: 0.9870
-Epoch 5/10 Batch 1200 Loss: 0.0404 Accuracy: 0.9871
-Epoch 5/10 Batch 1300 Loss: 0.0407 Accuracy: 0.9869
-Epoch 5/10 Batch 1400 Loss: 0.0406 Accuracy: 0.9867
-Epoch 5/10 Validation Loss: 0.4332 Validation Accuracy: 0.9022
-Epoch 6/10 Batch 0 Loss: 0.0091 Accuracy: 1.0000
-Epoch 6/10 Batch 100 Loss: 0.0180 Accuracy: 0.9958
-Epoch 6/10 Batch 200 Loss: 0.0202 Accuracy: 0.9949
-Epoch 6/10 Batch 300 Loss: 0.0221 Accuracy: 0.9942
-Epoch 6/10 Batch 400 Loss: 0.0234 Accuracy: 0.9936
-Epoch 6/10 Batch 500 Loss: 0.0240 Accuracy: 0.9931
-Epoch 6/10 Batch 600 Loss: 0.0246 Accuracy: 0.9927
-Epoch 6/10 Batch 700 Loss: 0.0252 Accuracy: 0.9926
-Epoch 6/10 Batch 800 Loss: 0.0272 Accuracy: 0.9919
-Epoch 6/10 Batch 900 Loss: 0.0282 Accuracy: 0.9917
-Epoch 6/10 Batch 1000 Loss: 0.0288 Accuracy: 0.9915
-Epoch 6/10 Batch 1100 Loss: 0.0305 Accuracy: 0.9909
-Epoch 6/10 Batch 1200 Loss: 0.0310 Accuracy: 0.9906
-Epoch 6/10 Batch 1300 Loss: 0.0320 Accuracy: 0.9904
-Epoch 6/10 Batch 1400 Loss: 0.0328 Accuracy: 0.9900
-Epoch 6/10 Validation Loss: 0.4692 Validation Accuracy: 0.9060
-Epoch 7/10 Batch 0 Loss: 0.0147 Accuracy: 1.0000
-Epoch 7/10 Batch 100 Loss: 0.0193 Accuracy: 0.9943
-Epoch 7/10 Batch 200 Loss: 0.0188 Accuracy: 0.9949
-Epoch 7/10 Batch 300 Loss: 0.0194 Accuracy: 0.9948
-Epoch 7/10 Batch 400 Loss: 0.0190 Accuracy: 0.9953
-Epoch 7/10 Batch 500 Loss: 0.0198 Accuracy: 0.9949
-Epoch 7/10 Batch 600 Loss: 0.0209 Accuracy: 0.9945
-Epoch 7/10 Batch 700 Loss: 0.0223 Accuracy: 0.9939
-Epoch 7/10 Batch 800 Loss: 0.0226 Accuracy: 0.9938
-Epoch 7/10 Batch 900 Loss: 0.0224 Accuracy: 0.9939
-Epoch 7/10 Batch 1000 Loss: 0.0228 Accuracy: 0.9938
-Epoch 7/10 Batch 1100 Loss: 0.0231 Accuracy: 0.9935
-Epoch 7/10 Batch 1200 Loss: 0.0237 Accuracy: 0.9932
-Epoch 7/10 Batch 1300 Loss: 0.0244 Accuracy: 0.9929
-Epoch 7/10 Batch 1400 Loss: 0.0253 Accuracy: 0.9925
-Epoch 7/10 Validation Loss: 0.5301 Validation Accuracy: 0.9040
-Epoch 8/10 Batch 0 Loss: 0.0029 Accuracy: 1.0000
-Epoch 8/10 Batch 100 Loss: 0.0272 Accuracy: 0.9912
-Epoch 8/10 Batch 200 Loss: 0.0192 Accuracy: 0.9940
-Epoch 8/10 Batch 300 Loss: 0.0193 Accuracy: 0.9937
-Epoch 8/10 Batch 400 Loss: 0.0194 Accuracy: 0.9939
-Epoch 8/10 Batch 500 Loss: 0.0212 Accuracy: 0.9935
-Epoch 8/10 Batch 600 Loss: 0.0214 Accuracy: 0.9935
-Epoch 8/10 Batch 700 Loss: 0.0213 Accuracy: 0.9933
-Epoch 8/10 Batch 800 Loss: 0.0212 Accuracy: 0.9934
-Epoch 8/10 Batch 900 Loss: 0.0216 Accuracy: 0.9932
-Epoch 8/10 Batch 1000 Loss: 0.0232 Accuracy: 0.9926
-Epoch 8/10 Batch 1100 Loss: 0.0241 Accuracy: 0.9924
-Epoch 8/10 Batch 1200 Loss: 0.0246 Accuracy: 0.9921
-Epoch 8/10 Batch 1300 Loss: 0.0257 Accuracy: 0.9919
-Epoch 8/10 Batch 1400 Loss: 0.0259 Accuracy: 0.9919
-Epoch 8/10 Validation Loss: 0.5413 Validation Accuracy: 0.9059
-Epoch 9/10 Batch 0 Loss: 0.0035 Accuracy: 1.0000
-Epoch 9/10 Batch 100 Loss: 0.0144 Accuracy: 0.9958
-Epoch 9/10 Batch 200 Loss: 0.0152 Accuracy: 0.9954
-Epoch 9/10 Batch 300 Loss: 0.0146 Accuracy: 0.9955
-Epoch 9/10 Batch 400 Loss: 0.0145 Accuracy: 0.9957
-Epoch 9/10 Batch 500 Loss: 0.0137 Accuracy: 0.9960
-Epoch 9/10 Batch 600 Loss: 0.0141 Accuracy: 0.9958
-Epoch 9/10 Batch 700 Loss: 0.0139 Accuracy: 0.9958
-Epoch 9/10 Batch 800 Loss: 0.0146 Accuracy: 0.9956
-Epoch 9/10 Batch 900 Loss: 0.0151 Accuracy: 0.9952
-Epoch 9/10 Batch 1000 Loss: 0.0160 Accuracy: 0.9949
-Epoch 9/10 Batch 1100 Loss: 0.0163 Accuracy: 0.9948
-Epoch 9/10 Batch 1200 Loss: 0.0170 Accuracy: 0.9945
-Epoch 9/10 Batch 1300 Loss: 0.0174 Accuracy: 0.9944
-Epoch 9/10 Batch 1400 Loss: 0.0176 Accuracy: 0.9943
-Epoch 9/10 Validation Loss: 0.5682 Validation Accuracy: 0.9040
-Epoch 10/10 Batch 0 Loss: 0.0047 Accuracy: 1.0000
-Epoch 10/10 Batch 100 Loss: 0.0153 Accuracy: 0.9947
-Epoch 10/10 Batch 200 Loss: 0.0156 Accuracy: 0.9949
-Epoch 10/10 Batch 300 Loss: 0.0146 Accuracy: 0.9953
-Epoch 10/10 Batch 400 Loss: 0.0151 Accuracy: 0.9951
-Epoch 10/10 Batch 500 Loss: 0.0158 Accuracy: 0.9947
-Epoch 10/10 Batch 600 Loss: 0.0160 Accuracy: 0.9947
-Epoch 10/10 Batch 700 Loss: 0.0154 Accuracy: 0.9949
-Epoch 10/10 Batch 800 Loss: 0.0155 Accuracy: 0.9950
-Epoch 10/10 Batch 900 Loss: 0.0156 Accuracy: 0.9951
-Epoch 10/10 Batch 1000 Loss: 0.0159 Accuracy: 0.9951
-Epoch 10/10 Batch 1100 Loss: 0.0163 Accuracy: 0.9949
-Epoch 10/10 Batch 1200 Loss: 0.0174 Accuracy: 0.9946
-Epoch 10/10 Batch 1300 Loss: 0.0178 Accuracy: 0.9945
-Epoch 10/10 Batch 1400 Loss: 0.0181 Accuracy: 0.9943
-Epoch 10/10 Validation Loss: 0.6033 Validation Accuracy: 0.9058
-```
+The loss, accuracy and confusion matrix are shown below:
+
+![Image](https://github.com/user-attachments/assets/447d4ae4-96b9-4d93-8331-87309830581e)
+
+![Image](https://github.com/user-attachments/assets/f00d6c7b-d70b-4d71-8bb3-84eec7f2c27f)
+
+![Image](https://github.com/user-attachments/assets/24dbe25e-b471-4cfa-9704-93abf9420345)
 
 The best result on the validation set was 90.26%, and the algorithm stopped after 10 iterations.
 
+## Recurrent Neural Network (RNN)
+
+The `TRNNConfig` class stores the hyperparameters and settings for the RNN model :
+  * `embedding_dim`: Word vector dimension.
+
+  * `seq_length`: Sequence length
+
+  * `num_classes`: Number of classes
+
+  * `vocab_size`: Vocabulary size
+
+  * `hidden_dim`: Hidden layer neurons 
+
+  * `dropout_keep_prob`: Dropout keep probability.
+
+  * `learning_rate`: Learning Rate 
+
+  * `batch_size`: Training size per batch.
+
+  * `num_epochs`: Number of training epochs.
+
+  * `print_per_batch`, `save_per_batch`: Printing and saving frequency.
+
+
+The loss and accuracy shown below:
+
+![Image](https://github.com/user-attachments/assets/07856fe2-f774-494c-9b16-94e46b7cd054)
+
+![Image](https://github.com/user-attachments/assets/2f86e651-b7dc-4962-992c-239d0cd56dc3)
+
+![Image](https://github.com/user-attachments/assets/eabf8934-a6e8-4dad-a06d-a4a4add0e237)
+
+The best result on the validation set was 90.18%, which stopped after 10 iterations.
+
+## MultiLayer Perceptron (MLP)
+
+This model uses Global Vectors for Word Representation (GloVe) embeddings.
+
 The loss, accuracy and confusion matrix are shown below:
-![Image](https://github.com/user-attachments/assets/447d4ae4-96b9-4d93-8331-87309830581e)
-![Image](https://github.com/user-attachments/assets/f00d6c7b-d70b-4d71-8bb3-84eec7f2c27f)
-![Image](https://github.com/user-attachments/assets/24dbe25e-b471-4cfa-9704-93abf9420345)
+
+![Image](https://github.com/user-attachments/assets/4d3a20ba-89d4-460e-8a65-344907080ecf)
+
+![Image](https://github.com/user-attachments/assets/5b34e600-de73-40a0-b0a0-298ea064f1d3)
+
+![Image](https://github.com/user-attachments/assets/5fc74c8b-82ca-44d7-a81d-b316750f0954)
+
+The best result on the validation set was 86.78%, which stopped after 10 iterations.
 
 
-## Recurrent Neural Network
-
+With the accuracy and confusion matrix results for each model, the CNN model's classification is very good, making it the best performing model. 
+For a more optimal result, adjusting the parameters will bring about these results.
